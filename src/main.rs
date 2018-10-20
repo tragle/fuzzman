@@ -26,10 +26,10 @@ fn main() {
                     .sample_iter(&Alphanumeric)
                     .take(10)
                     .collect();
-                let _res = client.post("http://localhost:3000")
+                let _ = client.post("http://localhost:3000")
                     .form(&[("q", str)])
                     .send();
-                child_tx.send("done").unwrap();
+                child_tx.send(1).unwrap();
             }
         }).join().unwrap();
     }
