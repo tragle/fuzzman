@@ -5,3 +5,4 @@ authors = ["Tom Ragle <tragle@gmail.com>"]
 
 [dependencies]
 reqwest = "0.9.3"
+rand = "0.5.0"
