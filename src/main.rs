@@ -30,6 +30,7 @@ fn main() {
             count += 1;
             print!("\r{}", count);
         }
+        println!("\n");
     });
 
     for _ in 0..threads {
@@ -49,4 +50,5 @@ fn main() {
             }
         }).join().unwrap();
     }
+    println!("\n");
 }
