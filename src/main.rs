@@ -15,9 +15,6 @@ fn main() {
     let threads: usize = num_cpus::get() - 1;
 
     let args: Vec<String> = env::args().collect();
-    if args.len() < 1 {
-        return;
-    }
     let default_arg = String::from("1000");
     let requests_arg = &args.get(1).unwrap_or(&default_arg);
     let requests = requests_arg.parse::<usize>().unwrap() / threads;
