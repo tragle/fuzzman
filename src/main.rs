@@ -16,7 +16,7 @@ fn main() {
 
     let args: Vec<String> = env::args().collect();
     let default_arg = String::from("1000");
-    let requests_arg = &args.get(1).unwrap_or(&default_arg);
+    let requests_arg = args.get(1).unwrap_or(&default_arg);
     let requests = requests_arg.parse::<usize>().unwrap() / threads;
 
     let (tx, rx) = mpsc::channel();
